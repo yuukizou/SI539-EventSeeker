@@ -35,6 +35,17 @@ a {
     color: #074626 !important;
 }
 
+.icon-heart:hover {
+    display:none;
+}
+
+.img-detail{
+    height: 400px;
+}
+
+.link-detail{
+    text-decoration: none;
+}
 a:hover, a:focus, a:active, a:visited {
     text-decoration: none;
 }
