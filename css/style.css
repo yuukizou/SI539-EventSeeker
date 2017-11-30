@@ -735,6 +735,7 @@ ul.footer-menu li a:hover {
 
     .intro-detail {
         width: 30%;
+        margin-top: 0;
     }
     #imgplace {
         width: 400px;
@@ -753,5 +754,9 @@ ul.footer-menu li a:hover {
 
     .hoverhint {
         font-size: 2rem;
+    }
+    .intro-detail {
+        margin-top: 0;
+        width: 30%;
     }
 }
