@@ -19,14 +19,20 @@ a {
 	-webkit-transition: all 0.3s;
   	-moz-transition: all 0.3s;
   	transition: all 0.3s;
+    color: grey;
 }
+
+a:hover {
+    color: #4caf50;
+}
+
 
 .newnav{
     background-color: white;
     border: 0px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
-    margin-bottom: 0;
-    margin-top: 3px;
+    margin-bottom: 1px;
+    padding-top: 3px;
 }
 
 .navbar-right > li > a {
@@ -287,7 +293,7 @@ color: black;
   	-moz-transition: all 0.3s;
   	transition: all 0.3s;
   	margin-right: 20px;
-  	border: 3px solid #f6f6f6;
+  	border: 3px solid #E1EAE1;
     border-radius: 5px;
 }
 .speaker .feature:hover {
@@ -297,7 +303,7 @@ color: black;
 .speaker-img {
 	max-width: 100%;
     border: 1px solid #efefef;
-    border-radius: 10%;
+    border-radius: 7%;
 }
 ul.speaker-social li {
 	list-style: none;
@@ -334,6 +340,7 @@ a span.ti-twitter-alt {
 .nav-tabs {
     margin-top: 20px;
 }
+
 .schedule .media {
 	margin-top: 4em;
 }
@@ -352,7 +359,7 @@ a span.ti-twitter-alt {
 
 
 .footer {
-    background-color: #2a2a2a;
+    background-color: #074626;
 /*    margin-top: 30px;*/
     color: #fff;
 }
@@ -361,8 +368,9 @@ a span.ti-twitter-alt {
 }
 .footer-credit {
     padding: 40px;
+    text-align: center;
 }
-ul.footer-menu {
+/*ul.footer-menu {
     text-align: right;
 }
 ul.footer-menu li {
@@ -375,7 +383,7 @@ ul.footer-menu li a {
 }
 ul.footer-menu li a:hover {
     color: #dd5138;
-}
+}*/
 
 
 .contact {
@@ -448,7 +456,7 @@ ul.footer-menu li a:hover {
     box-shadow: 3px 3px 10px #ccc;
     padding-bottom: 5%;
     padding-top: 3%;
-    background-color: #87B287;
+    background-color: #4e8e51;
 }
 
 .intro-text {
@@ -470,7 +478,7 @@ ul.footer-menu li a:hover {
 
 .intro-text > h3 {
     font-size: 1.5rem;
-    color: #074626;
+    color: #D6D9D7;
     text-shadow: 0px 0.1px 0px #074626;
 }
 
@@ -542,14 +550,14 @@ ul.footer-menu li a:hover {
 }
 .teamintro {
     box-shadow: 3px 3px 10px #ccc;
+    padding-bottom: 5%;
 }
 .introphoto {
     width: 100%;
 }
 #default-intro {
-    position: absolute;
-    margin-top: 10%;
-    margin-left: 15%;
+    padding-top: 15%;
+    padding-left: 15%;
     padding-right: 15%;
 /*    display: none;*/
 }
@@ -574,8 +582,7 @@ ul.footer-menu li a:hover {
 
 #intro-jacob, #intro-ruchi, #intro-yikai, #intro-mingyue {
     display: none;
-    position: absolute;
-    margin-top: 10%;
+    margin-top: 15%;
     padding-right: 15%;
     margin-left: 15%;
 }
@@ -648,7 +655,41 @@ ul.footer-menu li a:hover {
 
 }
 
+    .intro-text > button {
+        width: 100%;
+        position: relative;
+        margin-top: 7%;
+    }
 
+    .intro-detail {
+        width: 90%;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+
+    #imgplace {
+        margin-bottom: 0;
+        width: 200px;
+        height: 200px;
+    }
+
+    .hoverhint {
+        font-size: 1rem;
+    }
+
+    #default-intro {
+        margin-top: 0;
+        margin-bottom: 15%;
+    }
+
+    #intro-jacob, #intro-ruchi, #intro-yikai, #intro-mingyue {
+        margin-top: 10%;
+        margin-bottom: 15%;
+    }
+
+    .introphoto {
+        margin-bottom: 20px;
+    }
 /* iPad Portrait */
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -663,8 +704,23 @@ ul.footer-menu li a:hover {
     ul.footer-menu {
         margin-top: 0;
     }
-}
 
+    #default-intro > p {
+        font-size: 1.5rem;
+    }
+    #default-intro {
+        margin-top: 5%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    #imgplace {
+        width: 300px;
+        height: 300px;
+    }
+    .introphoto {
+        margin-bottom: 20px;
+    }
+}
 
 /* iPad Landscape */
 
@@ -672,5 +728,27 @@ ul.footer-menu li a:hover {
     .speaker .feature {
         width: 40%;
         margin-right: 9px;
+    }
+
+    .intro-detail {
+        width: 30%;
+    }
+    #imgplace {
+        width: 400px;
+        height: 400px;
+    }
+    .hoverhint {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #imgplace {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hoverhint {
+        font-size: 2rem;
     }
 }

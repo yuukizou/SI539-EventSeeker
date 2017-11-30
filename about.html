@@ -62,49 +62,16 @@
 	  			<p>With a background in psychology and neuroscience, I'm now looking forward to spur on my UX reserach with various research methods!</p>
 	  		</section>
   		</div>
-
-  		<script type="text/javascript">
-  			function imghover(imgchosen) {
-				var hoverzone = document.getElementById('imgplace');
-				var targetsrc = imgchosen.src;
-				var targetid = imgchosen.id;
-				hoverzone.style.backgroundImage = "url('" + targetsrc + "')";
-				document.getElementById('default-intro').style.display = "none";
-				if (targetid == "jacob") {
-					document.getElementById('intro-jacob').style.display = "inline-block";
-				}
-				else if (targetid == "ruchi") {
-					document.getElementById('intro-ruchi').style.display = "inline-block";
-				}
-				else if (targetid == "yikai") {
-					document.getElementById('intro-yikai').style.display = "inline-block";
-				}
-				else {
-					document.getElementById('intro-mingyue').style.display = "inline-block";
-				}
-			}
-
-			function imgleave() {
-				var hoverzone = document.getElementById('imgplace');
-				hoverzone.style.backgroundImage = "url('img/logo_icon.png')";
-				document.getElementById('default-intro').style.display = "inline-block";
-				document.getElementById('intro-mingyue').style.display = "none";
-				document.getElementById('intro-yikai').style.display = "none";
-				document.getElementById('intro-ruchi').style.display = "none";
-				document.getElementById('intro-jacob').style.display = "none";
-			}
-  		</script>
-
   	</div>
   	<div class="container-fluid peopleintro">
   		<div class="col-xs-12">
   			<h2 class="hoverhint">Hover on the photos below to get to know us!</h2>
   		</div>
   		<div class="col-xs-6 col-md-3">
-  			<img src="img/jacob.png" alt="Jacob Berman" class="introphoto" id="jacob" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  			<img src="img/jacob.jpg" alt="Jacob Berman" class="introphoto" id="jacob" onmouseover="imghover(this)" onmouseleave="imgleave()">
   		</div>
   		<div class="col-xs-6 col-md-3">
-  			<img src="img/ruchi.png" alt="Ruchi Ookalkar" class="introphoto" id="ruchi" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  			<img src="img/ruchi.jpg" alt="Ruchi Ookalkar" class="introphoto" id="ruchi" onmouseover="imghover(this)" onmouseleave="imgleave()">
   		</div>
   		<div class="col-xs-6 col-md-3">
   			<img src="img/yikai.jpeg" alt="Yikai Zou" class="introphoto" id="yikai" onmouseover="imghover(this)" onmouseleave="imgleave()">
@@ -117,18 +84,43 @@
   	<!-- Start: Footer -->
     <div class="container-fluid footer">
        <div class="row footer-credit">
-          	<div class="col-md-6 col-sm-6">
+          	<div class="col-md-12 col-sm-12">
             	<p>&copy; Events Seeker | All rights reserved.</p>
-          	</div>
-          	<div class="col-md-6 col-sm-6">
-	            <ul class="footer-menu">
-	              	<li><a href="#">About Us</a></li>
-	              	<li><a href="#">Privacy Policy</a></li>
-	              	<li><a href="#">Terms &amp; Condition</a></li>
-	            </ul>
           	</div>
         </div>
     </div>
     <!-- End: Footer -->
+
+    <script type="text/javascript">
+  		function imghover(imgchosen) {
+			var hoverzone = document.getElementById('imgplace');
+			var targetsrc = imgchosen.src;
+			var targetid = imgchosen.id;
+			hoverzone.style.backgroundImage = "url('" + targetsrc + "')";
+			document.getElementById('default-intro').style.display = "none";
+			if (targetid == "jacob") {
+				document.getElementById('intro-jacob').style.display = "inline-block";
+			}
+			else if (targetid == "ruchi") {
+				document.getElementById('intro-ruchi').style.display = "inline-block";
+			}
+			else if (targetid == "yikai") {
+				document.getElementById('intro-yikai').style.display = "inline-block";
+			}
+			else {
+				document.getElementById('intro-mingyue').style.display = "inline-block";
+			}
+		}
+
+		function imgleave() {
+			var hoverzone = document.getElementById('imgplace');
+			hoverzone.style.backgroundImage = "url('img/logo_icon.png')";
+			document.getElementById('default-intro').style.display = "inline-block";
+			document.getElementById('intro-mingyue').style.display = "none";
+			document.getElementById('intro-yikai').style.display = "none";
+			document.getElementById('intro-ruchi').style.display = "none";
+			document.getElementById('intro-jacob').style.display = "none";
+		}
+  		</script>
 </body>
 </html>
