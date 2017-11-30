@@ -41,22 +41,35 @@
 			<h1>The Opening of Toastmasters at Sweetwaters</h1>
 			<h3>by Sweetwaters Coffee &amp; Tea Washington St.</h3>
 			<!-- <p><span class="glyphicon glyphicon-flag"></span> 2400 Robin Ave, Berkerly, MI 48072</p> -->
-			<button type="button" class="btn btn-lg favbtn" id="fav" onmouseover="hearthover()" onmouseleave="heartleave()">
+			<button type="button" class="btn btn-lg favbtn" id="fav" onmouseover="hearthover()" onmouseleave="heartleave()"" onclick="addsucceed()">
 				<span class="glyphicon glyphicon-heart-empty" id="lgheartemp"></span>
 				<span class="glyphicon glyphicon-heart" id="lgheart"></span> ADD TO My FAVORITES
 			</button>
 
 			<script type="text/javascript">
+				var clicked = false;
+
 				function hearthover() {
-					document.getElementById('lgheartemp').style.display = "none";
-					document.getElementById('lgheart').style.display = "initial";
-					document.getElementById('fav').style.color = "#4caf50";
+					if (clicked == false) {
+						document.getElementById('lgheartemp').style.display = "none";
+						document.getElementById('lgheart').style.display = "initial";
+						document.getElementById('fav').style.color = "#4caf50";
+					}
 				}
 
 				function heartleave() {
-					document.getElementById('lgheart').style.display = "none";
-					document.getElementById('lgheartemp').style.display = "initial";
-					document.getElementById('fav').style.color = "#074626";
+					if (clicked == false) {
+						document.getElementById('lgheart').style.display = "none";
+						document.getElementById('lgheartemp').style.display = "initial";
+						document.getElementById('fav').style.color = "#074626";
+					}
+				}
+
+				function addsucceed() {
+					clicked = true;
+						window.alert("The event has been added to your favorites successfully!");
+						document.getElementById('lgheart').style.display = "initial";
+						document.getElementById('fav').style.color = "#4caf50";
 				}
 			</script>
 		</div>
