@@ -30,8 +30,8 @@
         <a class="navbar-brand" href="#"><img src="img/logo_full.png" alt="Event Seeker"></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="create_event.html"><span class="glyphicon glyphicon-plus"></span> Create Event</a></li>
-      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+      <li><a href="create_event.html"><span class="glyphicon glyphicon-plus"></span> CREATE EVENT</a></li>
+      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
     </ul>
   </div>
 </nav>
@@ -101,12 +101,11 @@
               <h3>Toastmasters at Sweetwaters</h3>
               <div class="card-para">
               <p>This club is open and everyone is welcome!</p>
-            </div>
-              <ul class="speaker-social" onmouseover="hearthover1()" onmouseleave="heartleave1()">
-                <li id="lgheartemp1"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-                <li id="lgheart1"><span class="glyphicon glyphicon-heart cardheart"></span></li>
-              </ul>
             </a>
+            </div>
+              <ul class="speaker-social">
+                <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              </ul>
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail">
             <a class = "link-detail" href="eventintro.html">
@@ -114,58 +113,41 @@
             <h3>Oak Park High School Reunion Weekend</h3>
             <div class="card-para">
             <p>Join us for a reunion!</p>
+            </a>
           </div>
-            <ul class="speaker-social" onmouseover="hearthover2()" onmouseleave="heartleave2()">
-              <li id="lgheartemp2"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-              <li id="lgheart2"><span class="glyphicon glyphicon-heart cardheart"></span></li>
+            <ul class="speaker-social">
+              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
-          </a>
           </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+      </div>
+      <div class="modal-body">
+        Event added to your favorites!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="col-md-4 col-sm-6 feature img-detail">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event3.jpg" class="speaker-img">
             <h3>Intermediate Swim - PE142 001</h3>
             <div class="card-para">
             <p>Pre-req: ability to swim with breaststroke.</p>
+          </a>
           </div>
-            <ul class="speaker-social" onmouseover="hearthover3()" onmouseleave="heartleave3()">
-              <li id="lgheartemp3"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-              <li id="lgheart3"><span class="glyphicon glyphicon-heart cardheart"></span></li>
+            <ul class="speaker-social">
+              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
-            </a>
           </div>
-
-          <script type="text/javascript">
-              function hearthover1() {
-                document.getElementById('lgheartemp1').style.display = "none";
-                document.getElementById('lgheart1').style.display = "inline-block";
-              }
-
-              function heartleave1() {
-                document.getElementById('lgheart1').style.display = "none";
-                document.getElementById('lgheartemp1').style.display = "inline-block";
-              }
-
-              function hearthover2() {
-                document.getElementById('lgheartemp2').style.display = "none";
-                document.getElementById('lgheart2').style.display = "inline-block";
-              }
-
-              function heartleave2() {
-                document.getElementById('lgheart2').style.display = "none";
-                document.getElementById('lgheartemp2').style.display = "inline-block";
-              }
-
-              function hearthover3() {
-                document.getElementById('lgheartemp3').style.display = "none";
-                document.getElementById('lgheart3').style.display = "inline-block";
-              }
-
-              function heartleave3() {
-                document.getElementById('lgheart3').style.display = "none";
-                document.getElementById('lgheartemp3').style.display = "inline-block";
-              }
-          </script>
         </div>
         <div role="tabpanel" class="tab-pane fade" id="2">
           <div class="myevents">
