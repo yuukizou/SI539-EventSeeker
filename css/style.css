@@ -247,6 +247,9 @@ color: black;
 	transform: scale(1.8);
 }
 
+.tab-hover{
+    color: #4caf50;
+}
 
 .hero-header {
 	background: #016cc7;
