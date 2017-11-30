@@ -349,7 +349,7 @@ a span.ti-twitter-alt {
 
 .footer {
     background-color: #2a2a2a;
-    margin-top: 30px;
+/*    margin-top: 30px;*/
     color: #fff;
 }
 .footer p {
@@ -519,6 +519,71 @@ ul.footer-menu li a:hover {
     background-color: #074626;
 }
 
+#imgplace {
+    width: 400px;
+    height: 400px;
+    margin-left: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    background-image: url('../img/logo_icon.png');
+    background-size: 100%;
+/*    border:5px solid black;*/
+    background-repeat: no-repeat;
+    box-shadow: 3px 3px 10px #ccc;
+}
+.peopleintro {
+    padding-top: 1%;
+    padding-bottom: 5%;
+    background-color: #F2F2F2;
+}
+.teamintro {
+    box-shadow: 3px 3px 10px #ccc;
+}
+.introphoto {
+    width: 100%;
+}
+#default-intro {
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 15%;
+    padding-right: 15%;
+/*    display: none;*/
+}
+
+#default-intro > h1 {
+    color: #074626;
+    font-weight: bold;
+}
+
+#default-intro > p {
+    font-size: 1.8rem;
+}
+
+.hoverhint {
+    margin-bottom: 3%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    color:  #4caf50;
+    font-weight: bold;
+}
+
+#intro-jacob, #intro-ruchi, #intro-yikai, #intro-mingyue {
+    display: none;
+    position: absolute;
+    margin-top: 10%;
+    padding-right: 15%;
+    margin-left: 15%;
+}
+
+#intro-jacob > h1, #intro-ruchi > h1, #intro-yikai > h1, #intro-mingyue > h1 {
+    color: #074626;
+    font-weight: bold;
+}
+
+#intro-jacob> p, #intro-ruchi > p, #intro-yikai > p, #intro-mingyue > p {
+    font-size: 1.8rem;
+}
 
 @-webkit-keyframes bounce { 
     0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 

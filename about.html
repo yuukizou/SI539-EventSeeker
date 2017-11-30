@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<meta name="description" content="">
+  	<meta name="author" content="Yikai">
+  	<title>Event Seeker | About Us</title>
+  	<link rel="icon" href="img/logo_icon.png">
+
+  	<!-- Bootstrap -->
+  	<link href="css/bootstrap.min.css" rel="stylesheet">
+  	<link href="css/style.css" rel="stylesheet">
+  	<link href="css/themify-icons.css" rel="stylesheet">
+  	<link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse newnav">
+	  	<div class="container-fluid">
+		    <div class="navbar-header">
+		        <a class="navbar-brand" href="#"><img src="img/logo_full.png" alt="Event Seeker"></a>
+		    </div>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="create_event.html"><span class="glyphicon glyphicon-plus"></span> Create Event</a></li>
+		      <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+		    </ul>
+	  	</div>
+  	</nav>
+  	<div class="container-fluid teamintro">
+  		<div class="col-xs-12 col-sm-6">
+  			<div  id="imgplace">
+  			</div>
+  			<!-- <img src="img/logo_icon.png" alt="imgplaceholder" id="placeholder"> -->
+  		</div>
+  		<div class="col-xs-12 col-sm-6">
+  			<section id="default-intro">
+  				<h1>Hi there!</h1>
+	  			<p>We are team EventSeeker.</p>
+	  			<p>We are four passionate graduate students from School of Information, University of Michigan, Ann Arbor.</p>
+	  			<p>Hope you are having fun when exploring our website!</p>
+	  		</section>
+	  		<section id="intro-jacob">
+	  			<h1>Jacob Berman</h1>
+	  			<p>Self introduction of Jacob.</p>
+	  		</section>
+	  		<section id="intro-ruchi">
+	  			<h1>Ruchi Ookalkar</h1>
+	  			<p>Self introduction of Ruchi.</p>
+	  		</section>
+	  		<section id="intro-yikai">
+	  			<h1>Yikai Zou</h1>
+	  			<p>Self introduction of Yikai.</p>
+	  			<p>Self introduction of Yikai p2.</p>
+	  		</section>
+	  		<section id="intro-mingyue">
+	  			<h1>Mingyue Gao</h1>
+	  			<p>Hi! I'm Mingyue and you can also call me Angie. </p>
+	  			<p>I'm a UX researcher, graphic designer as well as a first-year master student studying Human-Computer Interaction in U-M.</p>
+	  			<p>With a background in psychology and neuroscience, I'm now looking forward to spur on my UX reserach with various research methods!</p>
+	  		</section>
+  		</div>
+
+  		<script type="text/javascript">
+  			function imghover(imgchosen) {
+				var hoverzone = document.getElementById('imgplace');
+				var targetsrc = imgchosen.src;
+				var targetid = imgchosen.id;
+				hoverzone.style.backgroundImage = "url('" + targetsrc + "')";
+				document.getElementById('default-intro').style.display = "none";
+				if (targetid == "jacob") {
+					document.getElementById('intro-jacob').style.display = "inline-block";
+				}
+				else if (targetid == "ruchi") {
+					document.getElementById('intro-ruchi').style.display = "inline-block";
+				}
+				else if (targetid == "yikai") {
+					document.getElementById('intro-yikai').style.display = "inline-block";
+				}
+				else {
+					document.getElementById('intro-mingyue').style.display = "inline-block";
+				}
+			}
+
+			function imgleave() {
+				var hoverzone = document.getElementById('imgplace');
+				hoverzone.style.backgroundImage = "url('img/logo_icon.png')";
+				document.getElementById('default-intro').style.display = "inline-block";
+				document.getElementById('intro-mingyue').style.display = "none";
+				document.getElementById('intro-yikai').style.display = "none";
+				document.getElementById('intro-ruchi').style.display = "none";
+				document.getElementById('intro-jacob').style.display = "none";
+			}
+  		</script>
+
+  	</div>
+  	<div class="container-fluid peopleintro">
+  		<div class="col-xs-12">
+  			<h2 class="hoverhint">Hover on the photos below to get to know us!</h2>
+  		</div>
+  		<div class="col-xs-6 col-md-3">
+  			<img src="img/jacob.png" alt="Jacob Berman" class="introphoto" id="jacob" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  		</div>
+  		<div class="col-xs-6 col-md-3">
+  			<img src="img/ruchi.png" alt="Ruchi Ookalkar" class="introphoto" id="ruchi" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  		</div>
+  		<div class="col-xs-6 col-md-3">
+  			<img src="img/yikai.jpeg" alt="Yikai Zou" class="introphoto" id="yikai" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  		</div>
+  		<div class="col-xs-6 col-md-3">
+  			<img src="img/mingyue.png" alt="Mingyue Gao" class="introphoto" id="mingyue" onmouseover="imghover(this)" onmouseleave="imgleave()">
+  		</div>
+  	</div>
+
+  	<!-- Start: Footer -->
+    <div class="container-fluid footer">
+       <div class="row footer-credit">
+          	<div class="col-md-6 col-sm-6">
+            	<p>&copy; Events Seeker | All rights reserved.</p>
+          	</div>
+          	<div class="col-md-6 col-sm-6">
+	            <ul class="footer-menu">
+	              	<li><a href="#">About Us</a></li>
+	              	<li><a href="#">Privacy Policy</a></li>
+	              	<li><a href="#">Terms &amp; Condition</a></li>
+	            </ul>
+          	</div>
+        </div>
+    </div>
+    <!-- End: Footer -->
+</body>
+</html>
