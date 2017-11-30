@@ -101,12 +101,11 @@
               <h3>Toastmasters at Sweetwaters</h3>
               <div class="card-para">
               <p>This club is open and everyone is welcome!</p>
-            </div>
-              <ul class="speaker-social" onmouseover="hearthover1()" onmouseleave="heartleave1()">
-                <li id="lgheartemp1"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-                <li id="lgheart1"><span class="glyphicon glyphicon-heart cardheart"></span></li>
-              </ul>
             </a>
+            </div>
+              <ul class="speaker-social">
+                <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              </ul>
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail">
             <a class = "link-detail" href="eventintro.html">
@@ -114,12 +113,11 @@
             <h3>Oak Park High School Reunion Weekend</h3>
             <div class="card-para">
             <p>Join us for a reunion!</p>
+            </a>
           </div>
-            <ul class="speaker-social" onmouseover="hearthover2()" onmouseleave="heartleave2()">
-              <li id="lgheartemp2"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-              <li id="lgheart2"><span class="glyphicon glyphicon-heart cardheart"></span></li>
+            <ul class="speaker-social">
+              <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
-          </a>
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail">
             <a class = "link-detail" href="eventintro.html">
@@ -127,45 +125,12 @@
             <h3>Intermediate Swim - PE142 001</h3>
             <div class="card-para">
             <p>Pre-req: ability to swim with breaststroke.</p>
+          </a>
           </div>
-            <ul class="speaker-social" onmouseover="hearthover3()" onmouseleave="heartleave3()">
-              <li id="lgheartemp3"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
-              <li id="lgheart3"><span class="glyphicon glyphicon-heart cardheart"></span></li>
+            <ul class="speaker-social">
+              <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
-            </a>
           </div>
-
-          <script type="text/javascript">
-              function hearthover1() {
-                document.getElementById('lgheartemp1').style.display = "none";
-                document.getElementById('lgheart1').style.display = "inline-block";
-              }
-
-              function heartleave1() {
-                document.getElementById('lgheart1').style.display = "none";
-                document.getElementById('lgheartemp1').style.display = "inline-block";
-              }
-
-              function hearthover2() {
-                document.getElementById('lgheartemp2').style.display = "none";
-                document.getElementById('lgheart2').style.display = "inline-block";
-              }
-
-              function heartleave2() {
-                document.getElementById('lgheart2').style.display = "none";
-                document.getElementById('lgheartemp2').style.display = "inline-block";
-              }
-
-              function hearthover3() {
-                document.getElementById('lgheartemp3').style.display = "none";
-                document.getElementById('lgheart3').style.display = "inline-block";
-              }
-
-              function heartleave3() {
-                document.getElementById('lgheart3').style.display = "none";
-                document.getElementById('lgheartemp3').style.display = "inline-block";
-              }
-          </script>
         </div>
         <div role="tabpanel" class="tab-pane fade" id="2">
           <div class="myevents">
@@ -201,6 +166,14 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
+               <script type="text/javascript">
+              function addsucceed() {
+          clicked = true;
+            window.alert("Event added to your favorites!");
+            document.getElementById('lgheart').style.display = "initial";
+            document.getElementById('fav').style.color = "#4caf50";
+        }
+          </script>
       <!-- Google Analytics -->
       <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
