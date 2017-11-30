@@ -102,8 +102,9 @@
               <div class="card-para">
               <p>This club is open and everyone is welcome!</p>
             </div>
-              <ul class="speaker-social">
-                <li><a href="#"><span class="glyphicon glyphicon-heart-empty"></span></a></li>
+              <ul class="speaker-social" onmouseover="hearthover1()" onmouseleave="heartleave1()">
+                <li id="lgheartemp1"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+                <li id="lgheart1"><span class="glyphicon glyphicon-heart cardheart"></span></li>
               </ul>
             </a>
           </div>
@@ -114,8 +115,9 @@
             <div class="card-para">
             <p>Join us for a reunion!</p>
           </div>
-            <ul class="speaker-social">
-              <li><a href="#"><span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <ul class="speaker-social" onmouseover="hearthover2()" onmouseleave="heartleave2()">
+              <li id="lgheartemp2"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li id="lgheart2"><span class="glyphicon glyphicon-heart cardheart"></span></li>
             </ul>
           </a>
           </div>
@@ -126,11 +128,44 @@
             <div class="card-para">
             <p>Pre-req: ability to swim with breaststroke.</p>
           </div>
-            <ul class="speaker-social">
-              <li><a class href="#"><span class="glyphicon glyphicon-heart-empty"></span></a></li>
+            <ul class="speaker-social" onmouseover="hearthover3()" onmouseleave="heartleave3()">
+              <li id="lgheartemp3"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li id="lgheart3"><span class="glyphicon glyphicon-heart cardheart"></span></li>
             </ul>
+            </a>
           </div>
-        </a>
+
+          <script type="text/javascript">
+              function hearthover1() {
+                document.getElementById('lgheartemp1').style.display = "none";
+                document.getElementById('lgheart1').style.display = "inline-block";
+              }
+
+              function heartleave1() {
+                document.getElementById('lgheart1').style.display = "none";
+                document.getElementById('lgheartemp1').style.display = "inline-block";
+              }
+
+              function hearthover2() {
+                document.getElementById('lgheartemp2').style.display = "none";
+                document.getElementById('lgheart2').style.display = "inline-block";
+              }
+
+              function heartleave2() {
+                document.getElementById('lgheart2').style.display = "none";
+                document.getElementById('lgheartemp2').style.display = "inline-block";
+              }
+
+              function hearthover3() {
+                document.getElementById('lgheartemp3').style.display = "none";
+                document.getElementById('lgheart3').style.display = "inline-block";
+              }
+
+              function heartleave3() {
+                document.getElementById('lgheart3').style.display = "none";
+                document.getElementById('lgheartemp3').style.display = "inline-block";
+              }
+          </script>
         </div>
         <div role="tabpanel" class="tab-pane fade" id="2">
           <div class="myevents">

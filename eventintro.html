@@ -30,20 +30,40 @@
 	<div class="container-fluid intro-head">
 		<div class="col-md-8 col-xs-12">
 			<img src="img/event1.jpg" alt="Event Intro Img" class="intro-img">
+			<button type="button" class="btn btn-lg backbtn">
+				<a href="index.html">
+				<span class="glyphicon glyphicon-menu-left"> BACK</span>
+				</a>
+			</button>
 		</div>
 		<div class="container-fluid col-md-4 col-xs-12 intro-text">
 			<h2>DEC 13TH</h2>
 			<h1>The Opening of Toastmasters at Sweetwaters</h1>
 			<h3>by Sweetwaters Coffee &amp; Tea Washington St.</h3>
 			<!-- <p><span class="glyphicon glyphicon-flag"></span> 2400 Robin Ave, Berkerly, MI 48072</p> -->
-			<button type="button" class="btn btn-default btn-lg float-bottom">
-				<span class="glyphicon glyphicon-heart-empty"></span> ADD TO My FAVORITES
+			<button type="button" class="btn btn-lg favbtn" id="fav" onmouseover="hearthover()" onmouseleave="heartleave()">
+				<span class="glyphicon glyphicon-heart-empty" id="lgheartemp"></span>
+				<span class="glyphicon glyphicon-heart" id="lgheart"></span> ADD TO My FAVORITES
 			</button>
+
+			<script type="text/javascript">
+				function hearthover() {
+					document.getElementById('lgheartemp').style.display = "none";
+					document.getElementById('lgheart').style.display = "initial";
+					document.getElementById('fav').style.color = "#4caf50";
+				}
+
+				function heartleave() {
+					document.getElementById('lgheart').style.display = "none";
+					document.getElementById('lgheartemp').style.display = "initial";
+					document.getElementById('fav').style.color = "#074626";
+				}
+			</script>
 		</div>
 	</div>
 	<div class="container-fluid intro-body">
 		<div class="container-fluid col-xs-8 intro-des">
-			<h4>DESCRIPTION</h4>
+			<h4 class="bodytitle">DESCRIPTION</h4>
 			<p>
 			This club is open and everyone is welcome! Sweetwaters staff and community members are creating a new Toastmasters club @ Sweetwaters. We will have some experienced Toastmasters members on hand too, to show the basic format of a Toastmaster's meeting. Attendees will have the chance to give input into the new club and create a great experience and build a new club culture!</p>
 			<p>
@@ -56,16 +76,16 @@
 			</p>
 		</div>
 		<div class="container-fluid col-xs-4 intro-detail">
-			<div class="container-fluid">
-				<h4>TIME</h4>
+			<div class="container-fluid detailpart">
+				<h4 class="bodytitle">TIME</h4>
 				<p>Web, December 13, 2017</p>
 				<p>7:00 PM - 8:30 PM EST</p>
 			</div>
-			<div class="container-fluid">
-				<h4>LOCATION</h4>
-				<p>Sweetwaters Coffee &amp; Tea<br>
-				123 West Washington Street<br>
-				Ann Arbor, MI 48104</p>
+			<div class="container-fluid detailpart">
+				<h4 class="bodytitle">LOCATION</h4>
+				<p>Sweetwaters Coffee &amp; Tea</p>
+				<p>123 West Washington Street
+				<br>Ann Arbor, MI 48104</p>
 			</div>
 		</div>
 	</div>
