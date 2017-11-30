@@ -104,7 +104,7 @@
             </a>
             </div>
               <ul class="speaker-social">
-                <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+                <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
               </ul>
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail">
@@ -116,9 +116,26 @@
             </a>
           </div>
             <ul class="speaker-social">
-              <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
           </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+      </div>
+      <div class="modal-body">
+        Event added to your favorites!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
           <div class="col-md-4 col-sm-6 feature img-detail">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event3.jpg" class="speaker-img">
@@ -128,7 +145,7 @@
           </a>
           </div>
             <ul class="speaker-social">
-              <li onclick = "addsucceed()"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
             </ul>
           </div>
         </div>
@@ -166,14 +183,6 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
-               <script type="text/javascript">
-              function addsucceed() {
-          clicked = true;
-            window.alert("Event added to your favorites!");
-            document.getElementById('lgheart').style.display = "initial";
-            document.getElementById('fav').style.color = "#4caf50";
-        }
-          </script>
       <!-- Google Analytics -->
       <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
