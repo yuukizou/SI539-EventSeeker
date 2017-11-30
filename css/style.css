@@ -35,8 +35,19 @@ a {
     color: #074626 !important;
 }
 
-.icon-heart:hover {
-    display:none;
+.glyphicon-heart-empty:hover {
+  color: #4caf50 !important;
+}
+
+.glyphicon-heart-empty{
+  color: black !important;
+  font-size: 25px !important;
+}
+
+.card-para{
+    width: 300px;
+    height: 50px;
+    margin: auto;
 }
 
 .img-detail{
