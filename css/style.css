@@ -744,6 +744,9 @@ ul.footer-menu li a:hover {
     .hoverhint {
         font-size: 2rem;
     }
+    .intro-text > button {
+        margin-top: 30%;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -758,5 +761,8 @@ ul.footer-menu li a:hover {
     .intro-detail {
         margin-top: 0;
         width: 30%;
+    }
+    .intro-text > button {
+        margin-top: 45%;
     }
 }
