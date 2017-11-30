@@ -55,8 +55,10 @@ a {
 }
 
 .link-detail{
-    text-decoration: none;
+    color: black;
 }
+
+
 a:hover, a:focus, a:active, a:visited {
     text-decoration: none;
 }
@@ -543,7 +545,7 @@ ul.footer-menu li a:hover {
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .speaker .feature {
-        width: 49%;
+        width: 40%;
         margin-right: 9px;
     }
 }
