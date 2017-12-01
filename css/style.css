@@ -56,6 +56,11 @@ a:hover {
   font-size: 25px !important;
 }
 
+.cardheart-full{
+  color: #4caf50 !important;
+  font-size: 25px !important;
+}
+
 .cardheart:hover:before{
     content: "\e005";
     cursor: pointer;
@@ -514,7 +519,7 @@ ul.footer-menu li a:hover {
 .intro-detail {
     background-color: #F2F2F2;
     padding-top: 1%;
-    width: 30%;
+    width: 30%
 }
 
 #lgheart, #lgheart1, #lgheart2, #lgheart3 {
@@ -648,6 +653,7 @@ ul.footer-menu li a:hover {
     border: 1px solid white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
 }
+
 .searchButton {
   font-size: 70%;
 }
