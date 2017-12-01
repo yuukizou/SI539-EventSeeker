@@ -97,13 +97,24 @@
     </ul>
 
         <div class="tab-content">
+          <div class="controls">
+            <button type="button" class="control" data-filter="all">All</button>
+            <button type="button" class="control" data-filter=".green">Indoor</button>
+            <button type="button" class="control" data-filter=".blue">Outdoor</button>
+            <!-- <button type="button" class="control" data-filter=".pink">Pink</button>
+            <button type="button" class="control" data-filter="none">None</button> -->
+
+            <button type="button" class="control" data-sort="date:asc">Asc</button>
+            <button type="button" class="control" data-sort="date:desc">Desc</button>
+        </div>
           <div role="tabpanel" class="tab-pane fade in active" id="1">
-          <div class="col-md-4 col-sm-6 feature img-detail">
+<!-- Start Card -->
+          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "2">
             <a class = "link-detail" href="eventintro.html">
               <img src="img/event1.jpg" class="speaker-img" alt ="event">
               <h3>Toastmasters at Sweetwaters</h3>
               <div class="card-para">
-              <p>This club is open and everyone is welcome!</p>
+              <p> 1/15/18<br/> This club is open and everyone is welcome!</p>
             </div>
             </a>
               <ul class="speaker-social">
@@ -112,12 +123,15 @@
                 </li>
               </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature img-detail">
+<!-- End Card -->
+
+
+          <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "6">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event2.jpg" class="speaker-img" alt="event">
             <h3>Oak Park High School Reunion Weekend</h3>
             <div class="card-para">
-            <p>Join us for a reunion!</p>
+            <p>6/10/18<br/> Join us for a reunion!</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -126,12 +140,12 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature img-detail">
+          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "1">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event3.jpg" class="speaker-img" alt="event">
             <h3>Intermediate Swim - PE142 001</h3>
             <div class="card-para">
-            <p>Pre-req: ability to swim with breaststroke.</p>
+            <p>1/11/18<br/> Pre-req: ability to swim with breaststroke.</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -139,12 +153,12 @@
                 <span class="fa fa-heart-o cardheart"></span></li>
             </ul>
           </div>
-            <div class="col-md-4 col-sm-6 feature img-detail">
+            <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "4">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event7.jpg" class="speaker-img" alt="event">
-            <h3>Oak Park High School Reunion Weekend</h3>
+            <h3>Pizza Party</h3>
             <div class="card-para">
-            <p>Join us for a reunion!</p>
+            <p>1/20/18 <br/> Join us for a reunion!</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -153,12 +167,12 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature img-detail">
+          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "3">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event8.jpg" class="speaker-img" alt="event">
-            <h3>Intermediate Swim - PE142 001</h3>
+            <h3>Intermediate Swim - PE555 001</h3>
             <div class="card-para">
-            <p>Pre-req: ability to swim with breaststroke.</p>
+            <p>1/18/18 <br/> Pre-req: ability to swim with breaststroke.</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -167,12 +181,12 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-4 col-sm-6 feature img-detail">
+          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "5">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event9.jpg" class="speaker-img" alt="event">
-            <h3>Intermediate Swim - PE142 001</h3>
+            <h3>Intermediate Swim - PE999 001</h3>
             <div class="card-para">
-            <p>Pre-req: ability to swim with breaststroke.</p>
+            <p>1/25/18 <br/> Pre-req: ability to swim with breaststroke.</p>
             </div>
           </a>
 
@@ -185,11 +199,6 @@
         </div>
 
 <!-- fav and unfav -->
-  <script>
-    $('li.links').click(function(e){
-  $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
-});
-  </script>
 
   <!-- Modal for success message-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -237,6 +246,19 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
+      <script src="js/mixitup.min.js"></script>
+
+        <script>
+            var containerEl = document.querySelector('.container');
+
+            var mixer = mixitup(containerEl);
+        </script>
+
+          <script>
+    $('li.links').click(function(e){
+  $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
+});
+  </script>
 <!--       <script>
       function myFunction(x) {
       x.classList.toggle("fa-thumbs-o-up");
