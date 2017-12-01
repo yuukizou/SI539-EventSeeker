@@ -14,6 +14,7 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/themify-icons.css" rel="stylesheet">
   <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -106,8 +107,8 @@
             </div>
             </a>
               <ul class="speaker-social">
-                <li data-toggle="modal" data-target="#myModal">
-                 <span class="glyphicon glyphicon-heart-empty cardheart"></span>
+                <li class = "links" data-toggle="modal" data-target="#myModal">
+                 <span class="fa fa-heart-o cardheart"></span>
                 </li>
               </ul>
           </div>
@@ -120,8 +121,8 @@
           </div>
         </a>
             <ul class="speaker-social">
-              <li data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-heart-empty cardheart"></span>
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart"></span>
               </li>
             </ul>
           </div>
@@ -134,7 +135,8 @@
           </div>
         </a>
             <ul class="speaker-social">
-              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart"></span></li>
             </ul>
           </div>
             <div class="col-md-4 col-sm-6 feature img-detail">
@@ -146,8 +148,8 @@
           </div>
         </a>
             <ul class="speaker-social">
-              <li data-toggle="modal" data-target="#myModal">
-                <span class="glyphicon glyphicon-heart-empty cardheart"></span>
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart"></span>
               </li>
             </ul>
           </div>
@@ -160,7 +162,9 @@
           </div>
         </a>
             <ul class="speaker-social">
-              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart"></span>
+              </li>
             </ul>
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail">
@@ -173,11 +177,21 @@
           </a>
 
             <ul class="speaker-social">
-              <li data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-heart-empty cardheart"></span></li>
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart">  
+                </span>
             </ul>
           </div>
         </div>
-  <!-- Modal -->
+
+<!-- fav and unfav -->
+  <script>
+    $('li.links').click(function(e){
+  $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
+});
+  </script>
+
+  <!-- Modal for success message-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -223,15 +237,10 @@
       <script src="js/jquery.easing.min.js"></script>
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
-      <!-- Google Analytics -->
-      <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-29231762-2', 'auto');
-      ga('send', 'pageview');
-      </script>
+<!--       <script>
+      function myFunction(x) {
+      x.classList.toggle("fa-thumbs-o-up");
+      }
+      </script> -->
     </body>
     </html>

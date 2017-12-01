@@ -62,7 +62,7 @@ a:hover {
 }
 
 .cardheart:hover:before{
-    content: "\e005";
+    content: "\f004";
     cursor: pointer;
 }
 
