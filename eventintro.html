@@ -104,27 +104,25 @@
 				<br>Ann Arbor, MI 48104</p>
 			</div>
 		</div>
+		<!-- Map -->
+		<div class="container-fluid" id="map">
+			<script>
+				function initMap() {
+					var uluru = {lat: 42.28, lng: -83.743};
+					var map = new google.maps.Map(document.getElementById('map'), {
+						zoom: 10,
+						center: uluru
+					});
+					var marker = new google.maps.Marker({
+						position: uluru,
+						map: map
+					});
+				}
+			</script>
+		</div>
+		<!-- End of Map -->
 	</div>
-
-	<!-- Map -->
-
-	<div id="map">
-		<script>
-			function initMap() {
-				var uluru = {lat: 42.28, lng: -83.743};
-				var map = new google.maps.Map(document.getElementById('map'), {
-					zoom: 10,
-					center: uluru
-				});
-				var marker = new google.maps.Marker({
-					position: uluru,
-					map: map
-				});
-			}
-		</script>
-	</div>
-
-	<!-- End of Map -->
+	
 	
 	<!-- Start: Footer -->
     <div class="container-fluid footer">

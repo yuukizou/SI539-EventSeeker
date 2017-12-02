@@ -526,12 +526,14 @@ ul.footer-menu li a:hover {
 .intro-des {
     padding-left: 3%;
     padding-right: 10%;
+    margin-bottom: 5%;
 }
 
 .intro-detail {
     background-color: #F2F2F2;
     padding-top: 1%;
     width: 30%
+    margin-bottom: 5%;
 }
 
 #lgheart, #lgheart1, #lgheart2, #lgheart3 {
@@ -640,6 +642,10 @@ ul.footer-menu li a:hover {
     color: #4caf50;
     background-color: white;
     border-color: #4caf50;
+}
+
+#map {
+    margin-top: 5%;
 }
 
 @-webkit-keyframes bounce { 
