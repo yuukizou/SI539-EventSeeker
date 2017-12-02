@@ -605,6 +605,8 @@ ul.footer-menu li a:hover {
 }
 
 .filtertoolbar {
+    width: 70%;
+    left: 15%;
     margin-top: 2%;
 }
 
@@ -673,6 +675,11 @@ ul.footer-menu li a:hover {
     border: 1px solid white;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
 }
+
+    .filtertoolbar{
+        width: 75%;
+        left: 1%;
+    }
 
 .searchButton {
   font-size: 70%;
@@ -748,6 +755,11 @@ ul.footer-menu li a:hover {
     }
     .introphoto {
         margin-bottom: 20px;
+    }
+
+    .filtertoolbar{
+        width: 70%;
+        left: 7%;
     }
 }
 
