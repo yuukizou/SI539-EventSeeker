@@ -43,6 +43,12 @@ a:hover {
     color: #3C753C !important;
 }
 
+.carousel {
+    width: 99%;
+    margin: 0 auto;
+    background-color: white
+}
+
 .row-title {
     display: none;
 }

@@ -82,9 +82,9 @@
       </div>
     </div>
     <div>
-      <div class="container">
 
-        <!-- Yikai: Events list -->
+<!-- Yikai: Events list -->
+      <div class="container">
         <div class="row me-row content-ct speaker" id="speakers">
           <h2 class="row-title">Event</h2>
           <div id="exTab2" class="container">
@@ -96,8 +96,10 @@
               </li>
             </ul>
 
+
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade in active" id="1">
+                <div role="tabpanel" class="tab-pane fade in active" id="1">
+
                 <div class="controls btn-group filtertoolbar" role="group" aria-label="filtertool">
                   <button class="btn eventfilter-title"><span class="glyphicon glyphicon-filter"></span></button>
                   <button type="button" class="control btn btn-default eventfilter" data-filter="all">All</button>
@@ -106,6 +108,7 @@
                   <button type="button" class="control btn btn-default eventfilter" data-sort="date:asc"><span class="glyphicon glyphicon-arrow-up"></span> Date</button>
                   <button type="button" class="control btn btn-default eventfilter" data-sort="date:desc"><span class="glyphicon glyphicon-arrow-down"></span> Date</button>
                 </div>
+                
                 <!-- Start Card -->
                 <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "2">
                   <a class = "link-detail" href="eventintro.html">
@@ -122,6 +125,7 @@
                  </ul>
                </div>
                <!-- End Card -->
+
                <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "4">
                 <a class = "link-detail" href="eventintro.html">
                   <img src="img/event2.jpg" class="speaker-img" alt="event">
@@ -191,13 +195,11 @@
                       <span class="fa fa-heart-o cardheart">  
                       </span>
                     </ul>
-                  </div>
                 </div>
+</div>
 
-                <!-- fav and unfav -->
-
-                <!-- Modal for success message-->
-                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <!-- Modal for success message-->
+                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -215,11 +217,12 @@
                 </div>
 
                 <!-- tab 2: my events -->
-                <div role="tabpanel" class="tab-pane fade" id="2">
+                <div role="tabpanel" class="tab-pane" id="2">
                   <div class="myevents">
                     <p class="message">You haven't logged in yet. Please <a href = "login.html"> log in</a> to see your events!</p>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -243,18 +246,16 @@
       <script src="js/scrolling-nav.js"></script>
       <script src="js/validator.js"></script>
       <script src="js/mixitup.min.js"></script>
+      <script>
+        $('li.links').click(function(e){
+          $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
+        });
+      </script>
 
       <script>
         var containerEl = document.querySelector('.container');
 
         var mixer = mixitup(containerEl);
-      </script>
-
-      <script>
-        $('li.links').click(function(e){
-          e.preventDefault();
-          $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
-        });
       </script>
 
     </body>
