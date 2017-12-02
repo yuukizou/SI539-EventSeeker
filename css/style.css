@@ -195,6 +195,12 @@ color: black;
   border-radius: 0;
 }
 
+#map{
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    bottom: 20%;
+}
 /* change border radius for the tab , apply corners on top*/
 
 
@@ -618,6 +624,10 @@ ul.footer-menu li a:hover {
 .eventfilter-title:hover {
     background-color: #F2F2F2;
     border-color: #D3D3D3;
+}
+
+.eventfilter{
+    position: fixed;
 }
 
 .eventfilter:hover {
