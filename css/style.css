@@ -68,12 +68,12 @@ a:hover {
 
 .card-para{
     width: 300px;
-    height: 50px;
+    height: 70px;
     margin: auto;
 }
 
 .img-detail{
-    height: 400px;
+    height: 430px;
 }
 
 .link-detail{
@@ -602,6 +602,26 @@ ul.footer-menu li a:hover {
 
 #intro-jacob> p, #intro-ruchi > p, #intro-yikai > p, #intro-mingyue > p {
     font-size: 1.8rem;
+}
+
+.filtertoolbar {
+    margin-top: 2%;
+}
+
+.eventfilter-title {
+    background-color: #F2F2F2;
+    border-color: #D3D3D3;
+}
+
+.eventfilter-title:hover {
+    background-color: #F2F2F2;
+    border-color: #D3D3D3;
+}
+
+.eventfilter:hover {
+    color: #4caf50;
+    background-color: white;
+    border-color: #4caf50;
 }
 
 @-webkit-keyframes bounce { 

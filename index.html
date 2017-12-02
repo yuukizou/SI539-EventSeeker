@@ -97,16 +97,18 @@
     </ul>
 
         <div class="tab-content">
-          <div class="controls">
-            <button type="button" class="control" data-filter="all">All</button>
-            <button type="button" class="control" data-filter=".green">Indoor</button>
-            <button type="button" class="control" data-filter=".blue">Outdoor</button>
-            <!-- <button type="button" class="control" data-filter=".pink">Pink</button>
-            <button type="button" class="control" data-filter="none">None</button> -->
+            <div class="controls btn-group filtertoolbar" role="group" aria-label="filtertool">
+              <button class="btn eventfilter-title"><span class="glyphicon glyphicon-filter"></span></button>
+              <button type="button" class="control btn btn-default eventfilter" data-filter="all">All</button>
+              <button type="button" class="control btn btn-default eventfilter" data-filter=".green">Indoor</button>
+              <button type="button" class="control btn btn-default eventfilter" data-filter=".blue">Outdoor</button>
+              <!-- <button type="button" class="control" data-filter=".pink">Pink</button>
+              <button type="button" class="control" data-filter="none">None</button> -->
 
-            <button type="button" class="control" data-sort="date:asc">Asc</button>
-            <button type="button" class="control" data-sort="date:desc">Desc</button>
-        </div>
+              <button type="button" class="control btn btn-default eventfilter" data-sort="date:asc"><span class="glyphicon glyphicon-arrow-up"></span> Date</button>
+              <button type="button" class="control btn btn-default eventfilter" data-sort="date:desc"><span class="glyphicon glyphicon-arrow-down"></span> Date</button>
+          </div>
+
           <div role="tabpanel" class="tab-pane fade in active" id="1">
 <!-- Start Card -->
           <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "2">
@@ -114,7 +116,7 @@
               <img src="img/event1.jpg" class="speaker-img" alt ="event">
               <h3>Toastmasters at Sweetwaters</h3>
               <div class="card-para">
-              <p> 1/15/18<br/> This club is open and everyone is welcome!</p>
+              <p> JAN 15, 2018<br/> This club is open and everyone is welcome!</p>
             </div>
             </a>
               <ul class="speaker-social">
@@ -126,12 +128,12 @@
 <!-- End Card -->
 
 
-          <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "6">
+          <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "4">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event2.jpg" class="speaker-img" alt="event">
             <h3>Oak Park High School Reunion Weekend</h3>
             <div class="card-para">
-            <p>6/10/18<br/> Join us for a reunion!</p>
+            <p>JUN 10, 2018<br/> Join us for a reunion!</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -145,7 +147,7 @@
             <img src="img/event3.jpg" class="speaker-img" alt="event">
             <h3>Intermediate Swim - PE142 001</h3>
             <div class="card-para">
-            <p>1/11/18<br/> Pre-req: ability to swim with breaststroke.</p>
+            <p>JAN 11, 2018<br/> Pre-req: ability to swim with breaststroke.</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -153,26 +155,12 @@
                 <span class="fa fa-heart-o cardheart"></span></li>
             </ul>
           </div>
-            <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "4">
+            <div class="col-md-4 col-sm-6 feature img-detail mix blue" data-date = "3">
             <a class = "link-detail" href="eventintro.html">
             <img src="img/event7.jpg" class="speaker-img" alt="event">
-            <h3>Pizza Party</h3>
+            <h3>The R1SE Midwest Football Showcase</h3>
             <div class="card-para">
-            <p>1/20/18 <br/> Join us for a reunion!</p>
-          </div>
-        </a>
-            <ul class="speaker-social">
-              <li class = "links" data-toggle="modal" data-target="#myModal">
-                <span class="fa fa-heart-o cardheart"></span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "3">
-            <a class = "link-detail" href="eventintro.html">
-            <img src="img/event8.jpg" class="speaker-img" alt="event">
-            <h3>Intermediate Swim - PE555 001</h3>
-            <div class="card-para">
-            <p>1/18/18 <br/> Pre-req: ability to swim with breaststroke.</p>
+            <p>JAN 27, 2018 <br/>Elite Football Players from the Midwest will all be in attendance.</p>
           </div>
         </a>
             <ul class="speaker-social">
@@ -183,10 +171,24 @@
           </div>
           <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "5">
             <a class = "link-detail" href="eventintro.html">
-            <img src="img/event9.jpg" class="speaker-img" alt="event">
-            <h3>Intermediate Swim - PE999 001</h3>
+            <img src="img/event8.jpg" class="speaker-img" alt="event">
+            <h3>The Ann Arbor JAYCEES 66th Sunmmer Carnical</h3>
             <div class="card-para">
-            <p>1/25/18 <br/> Pre-req: ability to swim with breaststroke.</p>
+            <p>JUN 21, 2018 <br/>Join us at Pionner High School for rides, games, food and fun!</p>
+          </div>
+        </a>
+            <ul class="speaker-social">
+              <li class = "links" data-toggle="modal" data-target="#myModal">
+                <span class="fa fa-heart-o cardheart"></span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-6 feature img-detail mix green" data-date = "6">
+            <a class = "link-detail" href="eventintro.html">
+            <img src="img/event9.jpg" class="speaker-img" alt="event">
+            <h3>West 6th Neighborhood BBQ</h3>
+            <div class="card-para">
+            <p>SEP 01, 2018 <br/> West 6th is ushering in the 2018 Football season with a BBQ.</p>
             </div>
           </a>
 
