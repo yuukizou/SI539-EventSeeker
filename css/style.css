@@ -439,7 +439,7 @@ ul.footer-menu li a:hover {
     -webkit-animation-iteration-count:infinite; 
 } 
 
-
+/***** MINGYUE GAO  contribution – SI 539*****/
 .navbar-brand {
     width: 100%;
     padding-top: 5px;
@@ -482,26 +482,22 @@ ul.footer-menu li a:hover {
 .intro-text {
     padding-right: 5%;
 }
-
 .intro-text > h1 {
     font-size: 3rem;
     color: #F2F2F2;
     font-weight: bold;
     text-shadow: 0px 0.1px 2px #074626;
 }
-
 .intro-text > h2 {
     font-size: 2rem;
     color: white;
     text-shadow: 0px 0.1px 2px #074626;
 }
-
 .intro-text > h3 {
     font-size: 1.5rem;
     color: #D6D9D7;
     text-shadow: 0px 0.1px 0px #074626;
 }
-
 .intro-text > button {
     width: 100%;
     position: relative;
@@ -581,7 +577,6 @@ ul.footer-menu li a:hover {
     padding-top: 15%;
     padding-left: 15%;
     padding-right: 15%;
-/*    display: none;*/
 }
 
 #default-intro > h1 {
@@ -647,6 +642,7 @@ ul.footer-menu li a:hover {
 #map {
     margin-top: 5%;
 }
+/***** End: MINGYUE GAO  contribution – SI 539*****/
 
 @-webkit-keyframes bounce { 
     0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
@@ -691,28 +687,27 @@ ul.footer-menu li a:hover {
     }
 
     .card{
-    width: 100%;
-    height: 100px;
-    margin: auto;
-    border: 1px solid white;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
-}
+        width: 100%;
+        height: 100px;
+        margin: auto;
+        border: 1px solid white;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,.25);
+    }
 
     .filtertoolbar{
         width: 75%;
         left: 1%;
     }
 
-.searchButton {
-  font-size: 70%;
-}
+    .searchButton {
+      font-size: 70%;
+    }
 
-.searchTerm {
-    font-size: 80%;
-}
+    .searchTerm {
+        font-size: 80%;
+    }
 
-}
-
+/***** MINGYUE GAO  contribution – SI 539*****/
     .intro-text > button {
         width: 100%;
         position: relative;
@@ -748,8 +743,11 @@ ul.footer-menu li a:hover {
     .introphoto {
         margin-bottom: 20px;
     }
-/* iPad Portrait */
+/***** End: MINGYUE GAO  contribution – SI 539*****/
+}
+    
 
+/* iPad Portrait */
 @media (min-width: 768px) and (max-width: 991px) {
     .hero-header {
         padding: 3em 1em 1em 1em;
@@ -762,7 +760,12 @@ ul.footer-menu li a:hover {
     ul.footer-menu {
         margin-top: 0;
     }
+    .filtertoolbar{
+        width: 70%;
+        left: 7%;
+    }
 
+/***** MINGYUE GAO  contribution – SI 539*****/
     #default-intro > p {
         font-size: 1.5rem;
     }
@@ -778,21 +781,17 @@ ul.footer-menu li a:hover {
     .introphoto {
         margin-bottom: 20px;
     }
-
-    .filtertoolbar{
-        width: 70%;
-        left: 7%;
-    }
+/***** End: MINGYUE GAO  contribution – SI 539*****/
 }
 
 /* iPad Landscape */
-
 @media (min-width: 992px) and (max-width: 1199px) {
     .speaker .feature {
         width: 40%;
         margin-right: 9px;
     }
 
+/***** MINGYUE GAO  contribution – SI 539*****/
     .intro-detail {
         width: 30%;
         margin-top: 0;
@@ -807,9 +806,10 @@ ul.footer-menu li a:hover {
     .intro-text > button {
         margin-top: 30%;
     }
+/***** End: MINGYUE GAO  contribution – SI 539*****/
 }
 
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
     #imgplace {
         width: 400px;
         height: 400px;
@@ -825,4 +825,4 @@ ul.footer-menu li a:hover {
     .intro-text > button {
         margin-top: 45%;
     }
-}
+}*/
