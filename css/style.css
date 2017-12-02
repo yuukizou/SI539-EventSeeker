@@ -597,7 +597,7 @@ a span.ti-twitter-alt {
     }
 
     .searchButton {
-      font-size: 70%;
+        font-size: 70%;
     }
 
     .searchTerm {
@@ -605,17 +605,22 @@ a span.ti-twitter-alt {
     }
 
     .navbar-brand > img {
-    width: 30%;
-    margin-top: 3%;
-    height: auto;
-    max-width: 200px;
-}
+        width: 30%;
+        margin-top: 3%;
+        height: auto;
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        margin: 3% auto 3% auto;
+    }
 
-.navbar-right > li > a {
-    color: #4caf50 !important;
-    padding: 3%;
-    font-size: 80%;
-    left: 30%;
+    .navbar-right > li > a {
+        color: #4caf50 !important;
+        padding: 3%;
+        font-size: 80%;
+        left: 30%;
+        line-height: 5%;
+        max-height: 40px;
     }
 
 /* End of Yikai Zou Contribution */
