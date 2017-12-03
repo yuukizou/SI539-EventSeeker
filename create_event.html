@@ -58,16 +58,28 @@
           <hr>
         </div>
         <div class = "container-fluid">
-        <button type="button" class ="save-cr-btn">Save</button>
-        <button type="button" class ="save-cr-btn">Publish</button>
-      </div>
-      </div>
-    </div>
+          <button type="button" id = "save_btn" class ="save-cr-btn">Save</button>
+          <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+              <div class="modal-body">
+               Your Event is saved. You can come back and edit it later.  
+             </div>
+           </div>
+
+         </div>
+         <button type="button" onclickclass ="save-cr-btn">Publish</button>
+       </div>
+     </div>
+   </div>
 
 
 
-    <!-- Start: Footer -->
-    <div class="container-fluid footer">
+   <!-- Start: Footer -->
+   <div class="container-fluid footer">
      <div class="row footer-credit">
       <div class="col-md-12 col-sm-12">
         <p>&copy; Events Seeker | All rights reserved.</p>
@@ -75,20 +87,53 @@
     </div>
   </div>
   <!-- End: Footer -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="js/jquery.min.js"></script>
-  <script type="text/javascript">
-   function readURL(input) {
-    if (input.files && input.files[0]) {
-      var reader = new FileReader();
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/validator.js"></script>
+  <script>
+// Get the modal
+var modal = document.getElementById('myModal');
 
-      reader.onload = function (e) {
-        $('#mock')
-        .attr('src', e.target.result);
+// Get the button that opens the modal
+var btn = document.getElementById("save_btn");
 
-      };
-      reader.readAsDataURL(input.files[0]);
-    }
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
+}
+</script>
+<script type="text/javascript">
+ function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#mock')
+      .attr('src', e.target.result);
+
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
 </script>
 </body>
 </html>
