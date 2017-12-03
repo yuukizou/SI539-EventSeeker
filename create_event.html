@@ -11,21 +11,73 @@
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link href="css/create_event.css" rel="stylesheet">
   <link href="css/themify-icons.css" rel="stylesheet">
   <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <h1> Create Your Event </h1>
-  <div class="form row">
-      <form class="register-form">
-        <input type="text" placeholder="Event Name"/>
-        <input type="text" placeholder="Description"/>
-        <input type="text" placeholder="Location"/>
-        <input type="date" placeholder="Date"/>
-        <input type="time" placeholder="Time"/>
-        <button>create</button>
-      </form>
+  <nav class="navbar navbar-inverse newnav">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html"><img src="img/logo_full.png" alt="Event Seeker"></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="create_event.html"><span class="glyphicon glyphicon-plus"></span> CREATE EVENT</a></li>
+        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
+        <li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> ABOUT US</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container-fluid cr-header">
+    <div class="navbar-header create_header">
+      <h1>Create An Event</h1>
+    </div>
+    <ul class="nav navbar-nav navbar-right li-right">
+      <li><div class = "cr-event-btn-li"><button type="button" class = "save-cr-btn">Save</button></div></li>
+      <li><div class = "cr-event-btn-li"><button type="button" class = "save-cr-btn">Publish</button></div></li>
+    </ul>
   </div>
-</body>
-</html>
+  <hr>
+  <div class="form row">
+    <form class="register-form reg-form">
+      <label class = "label-title">EVENT TITLE</label>
+      <input type="text" placeholder="Enter the event name"/>
+      <label class = "label-title">LOCATION</label>
+      <input type="text" placeholder="Enter the address of your event"/>
+      <label class = "label-title">LOCATION</label>
+      <input type="text" placeholder="Location"/>
+      <label class = "label-title">DATE</label>
+      <input type="date" placeholder="Date"/>
+      <label class = "label-title">TIME</label>
+      <input type="time" placeholder="Time"/>
+
+      <form class="box" method="post" action="" enctype="multipart/form-data">
+        <div class="box__input">
+          <label class = "label-title">UPLOAD EVENT IMAGE</label>
+          <input type="file" onchange="readURL(this);"/>
+          <img id="mock" src="http://placehold.it/180" alt="Your Image"/>
+          <hr>
+        </div>
+        <button>SAVE</button>
+      </div>
+    </div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript">
+     function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#mock')
+                        .attr('src', e.target.result);
+
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+  </body>
+  </html>

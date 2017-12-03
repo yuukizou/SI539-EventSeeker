@@ -150,6 +150,65 @@ a:hover, a:focus, a:active, a:visited {
   color: #9DBFAF;
 }
 
+.save-cr-btn{
+    width: 100px;
+    height: 40px;
+    border-color: #eff2f5;
+    background-color: #fff;
+    color: #4caf50;
+    fill: #45494e;
+    font-weight: bold;
+}
+
+.save-cr-btn:hover{
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.li-right{
+    margin-right: 5%;
+}
+
+.cr-event-btn-li{
+    padding-left: 20px;
+    padding-top: 40px;
+}
+.create_header{
+    text-align: left;
+    margin-top: 1%;
+    margin-left: 2% !important;
+}
+
+#mock{
+  max-width:300px;
+}
+
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box.has-advanced-upload {
+  background-color: white;
+  outline: 2px dashed black;
+  outline-offset: -10px;
+}
+
+.label-title{
+    float: left;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+.cr-header{
+    width: 100%;
+    height: 100px;
+}
 
 .searchTerm:focus{
 border: 1px #4caf50 solid;
