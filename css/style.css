@@ -602,12 +602,22 @@ a span.ti-twitter-alt {
 }
 
 .login-page {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
-.backbtn-res {
+.backbtn-res > a {
     color: #074626;
-    display: none;
+}
+.backbtn-res > a:hover {
+    color: #4caf50;
+}
+
+.sidebar {
+    height: 550px;
+}
+
+.login-img {
+    height: 550px;
 }
 /***** End: MINGYUE GAO  contribution – SI 539*****/
 
@@ -732,9 +742,6 @@ a span.ti-twitter-alt {
     .login-img {
         display: none;
     }
-    .backbtn-res {
-        display: inline-block;
-    }
 /***** End: MINGYUE GAO  contribution – SI 539*****/
 }
     
@@ -775,9 +782,6 @@ a span.ti-twitter-alt {
     }
     .login-img {
         display: none;
-    }
-    .backbtn-res {
-        display: inline-block;
     }
 /***** End: MINGYUE GAO  contribution – SI 539*****/
 }
