@@ -17,24 +17,24 @@
 
 </head>
 <body>
-<!-- **** YIKAI ZOU  contribution – SI 539**** -->
+	<!-- **** YIKAI ZOU  contribution – SI 539**** -->
 	<!-- Start: Navigation -->
 	<nav class="navbar navbar-inverse newnav">
 		<div class="container-fluid">
-		<div class="navbar-header">
-		    <a class="navbar-brand" href="index.html"><img src="img/logo_full.png" alt="Event Seeker"></a>
-		</div>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href="create_event.html"><span class="glyphicon glyphicon-eye-open"></span>BROWSE EVENT</a></li>
-			<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
-			<li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> ABOUT US</a></li>
-		</ul>
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html"><img src="img/logo_full.png" alt="Event Seeker"></a>
+			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="create_event.html"><span class="glyphicon glyphicon-eye-open"></span>BROWSE EVENT</a></li>
+				<li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
+				<li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> ABOUT US</a></li>
+			</ul>
 		</div>
 	</nav>
 	<!-- End: Navigation -->
-<!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
+	<!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
 
-<!-- **** MINGYUE GAO  contribution – SI 539**** -->
+	<!-- **** MINGYUE GAO  contribution – SI 539**** -->
 	<!-- Start: Event Header -->
 	<div class="container-fluid intro-head">
 		<!-- Start: BACK Button -->
@@ -42,7 +42,7 @@
 			<img src="img/event1.jpg" alt="Event Intro Img" class="intro-img">
 			<button type="button" class="btn btn-lg backbtn">
 				<a href="index.html">
-				<span class="glyphicon glyphicon-menu-left"> BACK</span>
+					<span class="glyphicon glyphicon-menu-left"> BACK</span>
 				</a>
 			</button>
 		</div>
@@ -54,10 +54,25 @@
 			<h1>The Opening of Toastmasters at Sweetwaters</h1>
 			<h3>By Sweetwaters Coffee &amp; Tea</h3>
 			<!-- Start: LIKE Button -->
-			<button type="button" class="btn btn-lg favbtn" id="fav" onmouseover="hearthover()" onmouseleave="heartleave()" onclick="addsucceed()">
+			<button type="button" data-toggle="modal" data-target="#addfav" class="btn btn-lg favbtn" id="fav" onmouseover="hearthover()" onmouseleave="heartleave()">
 				<span class="glyphicon glyphicon-heart-empty" id="lgheartemp"></span>
 				<span class="glyphicon glyphicon-heart" id="lgheart"></span> ADD TO My FAVORITES
 			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="addfav" role="dialog">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title"><span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+						</div>
+						<div class="modal-body">
+							<p>Event added to your favorites!</p>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<script type="text/javascript">
 				var clicked = false;
@@ -80,14 +95,13 @@
 
 				function addsucceed() {
 					clicked = true;
-					window.alert("The event has been added to your favorites successfully!");
-					document.getElementById('lgheart').style.display = "initial";
-					document.getElementById('fav').style.color = "#4caf50";
+					// window.alert("The event has been added to your favorites successfully!");
+					// document.getElementById('lgheart').style.display = "initial";
+					// document.getElementById('fav').style.color = "#4caf50";
 					document.getElementById('fav').disabled = "true";
 				}
 			</script>
 			<!-- End: LIKE Button -->
-
 		</div>
 		<!-- End: Event Brief Intro -->
 
@@ -104,10 +118,10 @@
 			<p>
 			Come a little early and pick-up a beverage or snack, if you would like from Sweetwaters. Have fun making new friendships with encouraging and supportive people! You can be part of the founders of the club!</p>
 			<p>
-			There is success at Toastmasters! People try new things and everyone wins. It is an encouraging atmosphere of supportive people. When you join Toastmasters - you receive a Mentor and you may want to Mentor other people too.
+				There is success at Toastmasters! People try new things and everyone wins. It is an encouraging atmosphere of supportive people. When you join Toastmasters - you receive a Mentor and you may want to Mentor other people too.
 			There is free street parking at the meters after 6 pm, and parking in the residential areas by First &amp; Second street. If you are a Toastmaster and would like a meeting role, please feel free to contact me (Isabella), if you would just like to know more about this awesome event, or Toastmasters come enjoy and have fun!</p>
 			<p>
-			We look forward to seeing you at this exciting event! Everyone is welcome!
+				We look forward to seeing you at this exciting event! Everyone is welcome!
 			</p>
 		</div>
 		<!-- End: Event Description -->
@@ -123,46 +137,53 @@
 				<h4 class="bodytitle">LOCATION</h4>
 				<p>Sweetwaters Coffee &amp; Tea</p>
 				<p>123 West Washington Street
-				<br>Ann Arbor, MI 48104</p>
+					<br>Ann Arbor, MI 48104</p>
+				</div>
+			</div>
+			<!-- End: Event Details -->
+			<!-- **** End of MINGYUE GAO  contribution – SI 539**** -->
+
+			<!-- **** YIKAI ZOU  contribution – SI 539**** -->
+			<!-- Start: Map -->
+			<div class="container-fluid" id="map">
+				<script>
+					function initMap() {
+						var uluru = {lat: 42.28, lng: -83.743};
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 10,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+			</div>
+			<!-- End: Map -->
+		</div>
+
+		<!-- Start: Footer -->
+		<div class="container-fluid footer">
+			<div class="row footer-credit">
+				<div class="col-md-12 col-sm-12">
+					<p>&copy; Event Seeker | All rights reserved.</p>
+				</div>
 			</div>
 		</div>
-		<!-- End: Event Details -->
-<!-- **** End of MINGYUE GAO  contribution – SI 539**** -->
-
-<!-- **** YIKAI ZOU  contribution – SI 539**** -->
-		<!-- Start: Map -->
-		<div class="container-fluid" id="map">
-			<script>
-				function initMap() {
-					var uluru = {lat: 42.28, lng: -83.743};
-					var map = new google.maps.Map(document.getElementById('map'), {
-						zoom: 10,
-						center: uluru
-					});
-					var marker = new google.maps.Marker({
-						position: uluru,
-						map: map
-					});
-				}
-			</script>
-		</div>
-		<!-- End: Map -->
-	</div>
-	
-	<!-- Start: Footer -->
-    <div class="container-fluid footer">
-       	<div class="row footer-credit">
-        	<div class="col-md-12 col-sm-12">
-            	<p>&copy; Event Seeker | All rights reserved.</p>
-          	</div>
-        </div>
-    </div>
-
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC65Z-su8nFmkErg6-2r3RbJf_uB27BBgQ&callback=initMap">
-    </script>
-    <!-- End: Footer -->
-<!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.easing.min.js"></script>
+		<script src="js/scrolling-nav.js"></script>
+		<script src="js/validator.js"></script>
+		<script src="js/mixitup.min.js"></script>
+		<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC65Z-su8nFmkErg6-2r3RbJf_uB27BBgQ&callback=initMap">
+	</script>
+	<!-- End: Footer -->
+	<!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
 
 </body>
 </html>

@@ -36,6 +36,10 @@ h1 {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+  float: left;
+  margin-left: 15%;
+  width: 30%;
+  font-weight: bold;
 }
 .form button:hover,.form button:active,.form button:focus {
   background: #074626;

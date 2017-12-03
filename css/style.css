@@ -170,8 +170,10 @@ a:hover, a:focus, a:active, a:visited {
 }
 
 .cr-event-btn-li{
-    padding-left: 20px;
-    padding-top: 40px;
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 3%;
 }
 .create_header{
     text-align: left;
