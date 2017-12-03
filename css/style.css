@@ -153,16 +153,16 @@ a:hover, a:focus, a:active, a:visited {
 .save-cr-btn{
     width: 100px;
     height: 40px;
-    border-color: #eff2f5;
-    background-color: #fff;
-    color: #4caf50;
-    fill: #45494e;
+    border-color: #eff2f5 
+    background-color: #fff 
+    color: #4caf50 
+    fill: #45494e 
     font-weight: bold;
 }
 
 .save-cr-btn:hover{
-    background-color: #4caf50;
-    color: #fff;
+    background-color: #4caf50 
+    color: #fff 
 }
 
 .li-right{
