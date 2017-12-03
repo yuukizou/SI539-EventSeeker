@@ -38,6 +38,9 @@
         </ul>
       </div>
     </nav>
+    
+    {% block content %}
+
     <div class="gallery">
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
@@ -107,7 +110,7 @@
                   <button type="button" class="control btn btn-default eventfilter" data-sort="date:asc"><span class="glyphicon glyphicon-arrow-up"></span> Date</button>
                   <button type="button" class="control btn btn-default eventfilter" data-sort="date:desc"><span class="glyphicon glyphicon-arrow-down"></span> Date</button>
                 </div>
-                
+
                 <!-- Start Card -->
                 <div class="col-md-4 col-sm-6 feature img-detail mix green all" data-date = "2">
                   <a class = "link-detail" href="eventintro.html">
@@ -191,7 +194,7 @@
 
                   <ul class="speaker-social">
                     <li class = "links" data-toggle="modal" data-target="#myModal">
-                      <span class="fa fa-heart-o cardheart">  
+                      <span class="fa fa-heart-o cardheart">
                       </span>
                     </ul>
                   </div>
@@ -226,7 +229,7 @@
             </div>
           </div>
         </div>
-
+{% endblock %}
         <!-- Start: Footer -->
         <div class="container-fluid footer">
          <div class="row footer-credit">
