@@ -190,7 +190,7 @@ a:hover, a:focus, a:active, a:visited {
     cursor: pointer;
 }
 
-.modal {
+.modal_cr {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -204,14 +204,23 @@ a:hover, a:focus, a:active, a:visited {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-.modal-content {
+.glyphicon-chevron-left{
+    display: none !important;
+}
+
+.glyphicon-chevron-right{
+    display: none !important;
+}
+.cr-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
     width: 50%;
     height: 150px;
+    border: 1px solid rgba(0,0,0,.2);
 }
+
+
 .create_header{
     text-align: left;
     margin-top: 1%;
