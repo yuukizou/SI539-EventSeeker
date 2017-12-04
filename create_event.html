@@ -48,17 +48,16 @@
       <label class = "label-title">ORGANIZER</label>
       <input type="text" placeholder="Who organizes this event?"/>
       <label class = "label-title">DATE</label>
-      <input type="date" placeholder="Date"/>
+      <input type="date">
       <label class = "label-title">TIME</label>
-      <input type="time" placeholder="Time"/>
-
-      <form class="box" method="post" action="" enctype="multipart/form-data">
-        <div class="box__input">
+      <input type="time"/>
+<!--       <form class="box" method="post" action="" enctype="multipart/form-data"> -->
+<!--         <div class="box__input"> -->
           <label class = "label-title">UPLOAD EVENT IMAGE</label>
           <input type="file" onchange="readURL(this);"/>
           <img id="mock" src="http://placehold.it/180" alt="Your Image"/>
           <hr>
-        </div>
+<!--         </div> -->
         <div class = "container-fluid">
           <button type="button" id = "save_btn" class ="save-cr-btn">Save</button>
           <div id="myModal" class="modal">
@@ -73,42 +72,40 @@
            </div>
 
          </div>
-         <button type="button" id = "publish_btn" onclickclass ="save-cr-btn">Publish</button>
+         <button type="button" id = "publish_btn" class ="save-cr-btn">Publish</button>
          <div id="myModal_publish" class="modal">
-         <div class="modal-content cr-content">
-          <span class="close">&times;</span>
-          <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
-          <div class="modal-body">
-           Your event is published. You will be notified when it's approved. 
+           <div class="modal-content cr-content">
+            <span class="close">&times;</span>
+            <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+            <div class="modal-body">
+             Your event is published. You will be notified when it's approved. 
+           </div>
          </div>
        </div>
      </div>
-
-     </div>
-   </div>
- </div>
+   </form>
+</div>
 
 
-
- <!-- Start: Footer -->
- <div class="container-fluid footer">
-   <div class="row footer-credit">
-    <div class="col-md-12 col-sm-12">
-      <p>&copy; Events Seeker | All rights reserved.</p>
+   <!-- Start: Footer -->
+   <div class="container-fluid footer">
+     <div class="row footer-credit">
+      <div class="col-md-12 col-sm-12">
+        <p>&copy; Events Seeker | All rights reserved.</p>
+      </div>
     </div>
   </div>
-</div>
-<!-- End: Footer -->
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.easing.min.js"></script>
-<script src="js/scrolling-nav.js"></script>
-<script src="js/validator.js"></script>
+  <!-- End: Footer -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/scrolling-nav.js"></script>
+  <script src="js/validator.js"></script>
 
-<!-- Dialog -->
-<script>
+  <!-- Dialog -->
+  <script>
 // Get the modal
 var modal_cr = document.getElementById('myModal');
 
@@ -138,22 +135,22 @@ window.onclick = function(event) {
 
 <script>
 
-var modal_cr = document.getElementById('myModal_publish');
-var btn = document.getElementById("publish_btn");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal_cr.style.display = "block";
-}
-span.onclick = function() {
-  modal_cr.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal_cr) {
+  var modal_cr = document.getElementById('myModal_publish');
+  var btn = document.getElementById("publish_btn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal_cr.style.display = "block";
+  }
+  span.onclick = function() {
     modal_cr.style.display = "none";
   }
-}
+  window.onclick = function(event) {
+    if (event.target == modal_cr) {
+      modal_cr.style.display = "none";
+    }
+  }
 </script>
-<script type="text/javascript">
+<script>
  function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
