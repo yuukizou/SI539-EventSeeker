@@ -94,7 +94,7 @@
           <div id="exTab2" class="container">
             <ul class="nav nav-tabs">
               <li class="active">
-                <a class = "tab-hover" href="#1" data-toggle="tab">ALL EVENTS</a>
+                <a class = "tab-hover" href="#1" data-toggle="tab" data-filter=".all">ALL EVENTS</a>
               </li>
               <li><a class = "tab-hover" href="#2" data-toggle="tab">MY EVENTS</a>
               </li>
@@ -203,7 +203,7 @@
                <!-- End Card -->
 
                 <!-- Modal for success message-->
-                <div class="modal" id="myModal" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel">
                   <div class="modal-dialog" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -243,7 +243,10 @@
       <!-- End: Footer -->
 
       <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="js/jquery.min.js"></script>
+
       <!-- Include all compiled plugins (below), or include individual files as needed -->
       <script src="js/bootstrap.min.js"></script>
       <script src="js/jquery.easing.min.js"></script>
@@ -254,6 +257,10 @@
         $('li.links').click(function(e){
           $(this).find('span.fa').toggleClass('fa-heart fa-heart-o');
         });
+
+        // $(".nav-tabs a").click(function()){
+        //   $(this).tab('show');
+        // });
       </script>
 
       <script>
