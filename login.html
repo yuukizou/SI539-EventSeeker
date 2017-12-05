@@ -1,25 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Event Seeker | Login</title>
-    <link rel="icon" href="img/logo_icon.png">
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-
-    <!-- Custom styles for this template -->
-    <link href="css/login.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-
-  </head>
-
-  <body>
+{% extends "index.html" %}
+{% block content %}
     <div class="container login-page col-md-12">
       <div class="row">
         <div class="col-lg-8">
@@ -57,20 +37,6 @@
       </div>
     </div>
 
-  <!-- **** YIKAI ZOU  contribution – SI 539**** -->
-    <!-- Start: Footer -->
-    <div class="container-fluid footer">
-      <div class="row footer-credit">
-        <div class="col-md-12 col-sm-12">
-          <p>&copy; Events Seeker | All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-    <!-- End: Footer -->
-  <!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
-
-  </body>
-
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -79,4 +45,5 @@
        $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
     });
   </script>
-</html>
+
+{% endblock %}

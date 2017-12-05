@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="Yikai">
-  <title>Event Seeker | Find Your Events</title>
+  <title>{{ title }}</title>
   <link rel="icon" href="img/logo_icon.png">
+
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="{{ createStyle }}" rel="stylesheet">
   <link href="css/themify-icons.css" rel="stylesheet">
   <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -29,16 +31,16 @@
     <nav class="navbar navbar-inverse newnav">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img src="img/logo_full.png" alt="Event Seeker"></a>
+          <a class="navbar-brand" href="index.html"><img src="img/logo_full.png" alt="Event Seeker"></a>
         </div>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="create_event.html"><span class="glyphicon glyphicon-plus"></span> CREATE EVENT</a></li>
+          <li><a href="{{ navHref }}"><span class="{{ navIcon }}"></span>{{ navText }}</a></li>
           <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
           <li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> ABOUT US</a></li>
         </ul>
       </div>
     </nav>
-    
+
     {% block content %}
 
     <div class="gallery">
@@ -199,7 +201,7 @@
                       </span>
                     </ul>
                   </div>
-                </div>                
+                </div>
                <!-- End Card -->
 
                 <!-- Modal for success message-->
@@ -261,6 +263,7 @@
 
         var mixer = mixitup(containerEl);
       </script>
+      <script src="js/main.js"></script>
       <!-- **** End of YIKAI ZOU  contribution – SI 539**** -->
     </body>
     </html>
