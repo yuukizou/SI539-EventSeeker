@@ -40,9 +40,14 @@ class aboutHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('about.html')
     	title = "Event Seeker | About Us"
-
+        navText =  "CREATE EVENT"
+        navHref = "create_event.html"
+        navIcon = "glyphicon glyphicon-plus" # glyphicon glyphicon-eye-open
     	template_vars = {
-    		'title' : title
+    		'title' : title,
+            'navText' : navText,
+            'navHref':  navHref,
+            'navIcon' : navIcon
     	}
         self.response.out.write(template.render(template_vars))
 
@@ -67,9 +72,9 @@ class eventIntroHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('eventintro.html')
     	title = "Event Seeker | Event Details"
-        navText =  "BROWSE EVENT"
+        navText =  "CREATE EVENT"
         navHref = "index.html"
-        navIcon = "glyphicon glyphicon-eye-open"
+        navIcon = "glyphicon glyphicon-plus"
     	template_vars = {
     		'title' : title,
             'navText' : navText,
