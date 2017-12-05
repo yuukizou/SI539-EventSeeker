@@ -859,3 +859,15 @@ a span.ti-twitter-alt {
     }
 /***** End: MINGYUE GAO  contribution – SI 539*****/
 }
+
+.carousel-control.right {
+	background-image: none;
+}
+
+.carousel-control.left {
+	background-image: none;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+	margin: auto;
+}
