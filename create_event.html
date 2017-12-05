@@ -16,17 +16,17 @@
       <label class = "label-title">ORGANIZER</label>
       <input type="text" id="organizer" placeholder="Who organizes this event?"/>
       <label class = "label-title">DATE</label>
-      <input type="date" id="date" placeholder="Date"/>
-      <label class = "label-title">TIME</label>
-      <input type="time" id="time" placeholder="Time"/>
 
-      <form class="box" method="post" action="" enctype="multipart/form-data">
-        <div class="box__input">
+      <input type="date" id="date"/>
+      <label class = "label-title">TIME</label>
+      <input type="time" id="time"/>
+<!--       <form class="box" method="post" action="" enctype="multipart/form-data"> -->
+<!--         <div class="box__input"> -->
           <label class = "label-title">UPLOAD EVENT IMAGE</label>
           <input type="file" onchange="readURL(this);"/>
           <img id="mock" src="http://placehold.it/180" alt="Your Image"/>
           <hr>
-        </div>
+<!--         </div> -->
         <div class = "container-fluid">
           <button type="button" id = "save_btn" class ="save-cr-btn">Save</button>
           <div id="myModal" class="modal">
@@ -41,7 +41,7 @@
            </div>
 
          </div>
-         <button type="button" id = "publish_btn" onclickclass ="save-cr-btn">Publish</button>
+         <button type="button" id = "publish_btn" class ="save-cr-btn">Publish</button>
          <div id="myModal_publish" class="modal">
          <div class="modal-content cr-content">
           <span class="close">&times;</span>
@@ -51,17 +51,13 @@
          </div>
        </div>
      </div>
-
-     </div>
-   </div>
- </div>
-
-
-
+   </form>
+</div>
 
 <!-- Dialog -->
 
 <script type="text/javascript">
+
  function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
