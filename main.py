@@ -24,23 +24,76 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('index.html')
-        self.response.out.write(template.render())
+    	title = "Event Seeker | Find Your Events"
+        navText =  "CREATE EVENT"
+        navHref = "create_event.html"
+        navIcon = "glyphicon glyphicon-plus" # glyphicon glyphicon-eye-open
+    	template_vars = {
+    		'title' : title,
+            'navText' : navText,
+            'navHref':  navHref,
+            'navIcon' : navIcon
+    	}
+        self.response.out.write(template.render(template_vars))
+
 class aboutHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('about.html')
-        self.response.out.write(template.render())
+    	title = "Event Seeker | About Us"
+
+    	template_vars = {
+    		'title' : title
+    	}
+        self.response.out.write(template.render(template_vars))
+
 class createHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('create_event.html')
-        self.response.out.write(template.render())
+        title = "Event Seeker | Create an Event"
+        createStyle = "css/create_event.css"
+        navText =  "BROWSE EVENT"
+        navHref = "index.html"
+        navIcon = "glyphicon glyphicon-eye-open" # glyphicon glyphicon-eye-open
+    	template_vars = {
+    		'title' : title,
+            'createStyle' : createStyle,
+            'navText' : navText,
+            'navHref':  navHref,
+            'navIcon' : navIcon
+    	}
+        self.response.out.write(template.render(template_vars))
+
 class eventIntroHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('eventintro.html')
-        self.response.out.write(template.render())
+    	title = "Event Seeker | Event Details"
+        navText =  "BROWSE EVENT"
+        navHref = "index.html"
+        navIcon = "glyphicon glyphicon-eye-open"
+    	template_vars = {
+    		'title' : title,
+            'navText' : navText,
+            'navHref':  navHref,
+            'navIcon' : navIcon
+    	}
+        self.response.out.write(template.render(template_vars))
+
 class loginHandler(webapp2.RequestHandler):
     def get(self):
         template = JINJA_ENVIRONMENT.get_template('login.html')
-        self.response.out.write(template.render())
+        title = "Event Seeker | Login"
+        createStyle = "css/login.css"
+        navText =  " CREATE EVENT"
+        navHref = "create_event.html"
+        navIcon = "glyphicon glyphicon-plus" # glyphicon glyphicon-eye-open
+    	template_vars = {
+    		'title' : title,
+            'createStyle' : createStyle,
+            'navText' : navText,
+            'navHref':  navHref,
+            'navIcon' : navIcon
+    	}
+        self.response.out.write(template.render(template_vars))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),

@@ -1,37 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Ruchi Ookalkar">
-  <title>Event Seeker | Create Your Events</title>
-  <link rel="icon" href="img/logo_icon.png">
-
-  <!-- Bootstrap -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/create_event.css" rel="stylesheet">
-  <link href="css/themify-icons.css" rel="stylesheet">
-  <link href='css/dosis-font.css' rel='stylesheet' type='text/css'>
-</head>
-
-<!-- YIKAI CONTRIBUTION -->
-<body>
-  <nav class="navbar navbar-inverse newnav">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html"><img src="img/logo_full.png" alt="Event Seeker"></a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="index.html"><span class="glyphicon glyphicon-eye-open"></span> BROWSE EVENT</a></li>
-        <li><a href="login.html"><span class="glyphicon glyphicon-user"></span> LOGIN</a></li>
-        <li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> ABOUT US</a></li>
-      </ul>
-    </div>
-  </nav>
-
+{% extends "index.html" %}
+{% block content %}
 
   <div class="container-fluid cr-header">
     <div class="navbar-header create_header">
@@ -42,15 +10,16 @@
   <div class="form row">
     <form class="register-form reg-form">
       <label class = "label-title">EVENT TITLE</label>
-      <input type="text" placeholder="Enter the event name"/>
+      <input type="text" id="eventTitle" placeholder="Enter the event name"/>
       <label class = "label-title">LOCATION</label>
-      <input type="text" placeholder="Enter the address of your event"/>
+      <input type="text" id="eventLocation" placeholder="Enter the address of your event"/>
       <label class = "label-title">ORGANIZER</label>
-      <input type="text" placeholder="Who organizes this event?"/>
+      <input type="text" id="organizer" placeholder="Who organizes this event?"/>
       <label class = "label-title">DATE</label>
-      <input type="date">
+
+      <input type="date" id="date"/>
       <label class = "label-title">TIME</label>
-      <input type="time"/>
+      <input type="time" id="time"/>
 <!--       <form class="box" method="post" action="" enctype="multipart/form-data"> -->
 <!--         <div class="box__input"> -->
           <label class = "label-title">UPLOAD EVENT IMAGE</label>
@@ -64,93 +33,31 @@
 
             <!-- Modal content -->
             <div class="modal-content cr-content">
-              <span class="close1">&times;</span>
+              <span class="close">&times;</span>
               <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
               <div class="modal-body">
-               Your event is saved. You can come back and edit it later.  
+               Your event is saved. You can come back and edit it later.
              </div>
            </div>
 
          </div>
          <button type="button" id = "publish_btn" class ="save-cr-btn">Publish</button>
          <div id="myModal_publish" class="modal">
-           <div class="modal-content cr-content">
-            <span class="close">&times;</span>
-            <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
-            <div class="modal-body">
-             Your event is published. You will be notified when it's approved. 
-           </div>
+         <div class="modal-content cr-content">
+          <span class="close">&times;</span>
+          <h4> <span class="glyphicon glyphicon glyphicon-ok cardheart"></span> Success</h4>
+          <div class="modal-body">
+           Your event is published. You will be notified when it's approved.
          </div>
        </div>
      </div>
    </form>
 </div>
 
+<!-- Dialog -->
 
-   <!-- Start: Footer -->
-   <div class="container-fluid footer">
-     <div class="row footer-credit">
-      <div class="col-md-12 col-sm-12">
-        <p>&copy; Events Seeker | All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-  <!-- End: Footer -->
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="js/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/scrolling-nav.js"></script>
-  <script src="js/validator.js"></script>
+<script type="text/javascript">
 
-  <!-- Dialog -->
-  <script>
-// Get the modal
-var modal_cr = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("save_btn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal_cr.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal_cr.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal_cr) {
-    modal_cr.style.display = "none";
-  }
-}
-</script>
-
-<script>
-
-  var modal_cr = document.getElementById('myModal_publish');
-  var btn = document.getElementById("publish_btn");
-  var span = document.getElementsByClassName("close")[0];
-  btn.onclick = function() {
-    modal_cr.style.display = "block";
-  }
-  span.onclick = function() {
-    modal_cr.style.display = "none";
-  }
-  window.onclick = function(event) {
-    if (event.target == modal_cr) {
-      modal_cr.style.display = "none";
-    }
-  }
-</script>
-<script>
  function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -164,7 +71,7 @@ window.onclick = function(event) {
   }
 }
 </script>
+
+
 <!-- End of Dialog -->
-<!-- END OF YIKAI CONTRIBUTION -->
-</body>
-</html>
+{% endblock %}
