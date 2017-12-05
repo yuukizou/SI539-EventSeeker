@@ -835,7 +835,7 @@ a span.ti-twitter-alt {
 }
 
 /* Yikai Zou Contribution */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px){
     .speaker .feature {
         width: 40%;
         margin-right: 9px;
