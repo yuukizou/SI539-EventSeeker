@@ -73,7 +73,7 @@ class eventIntroHandler(webapp2.RequestHandler):
         template = JINJA_ENVIRONMENT.get_template('eventintro.html')
     	title = "Event Seeker | Event Details"
         navText =  "CREATE EVENT"
-        navHref = "index.html"
+        navHref = "create_event.html"
         navIcon = "glyphicon glyphicon-plus"
     	template_vars = {
     		'title' : title,
