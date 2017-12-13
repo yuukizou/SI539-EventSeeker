@@ -7,23 +7,21 @@
     </div>
   </div>
   <hr>
+<!-- Fix Accessiblity Yikai -->
   <div class="form row">
     <form class="register-form reg-form">
       <label class = "label-title">EVENT TITLE</label>
-      <input type="text" id="eventTitle" placeholder="Enter the event name" label="event_name"/>
+      <input type="text" id="eventTitle" placeholder="Enter the event name" aria-label="event_name"/>
       <label class = "label-title">LOCATION</label>
-      <input type="text" id="eventLocation" placeholder="Enter the address of your event" label="event_location"/>
+      <input type="text" id="eventLocation" placeholder="Enter the address of your event" aria-label="event_location"/>
       <label class = "label-title">ORGANIZER</label>
-      <input type="text" id="organizer" placeholder="Who organizes this event?" label="event_organizer"/>
+      <input type="text" id="organizer" placeholder="Who organizes this event?" aria-label="event_organizer"/>
       <label class = "label-title">DATE</label>
-
       <input type="date" id="date" aria-label="event_date"/>
       <label class = "label-title">TIME</label>
       <input type="time" id="time" label="event_time"/>
-<!--       <form class="box" method="post" action="" enctype="multipart/form-data"> -->
-<!--         <div class="box__input"> -->
           <label class = "label-title">UPLOAD EVENT IMAGE</label>
-          <input type="file" onchange="readURL(this);" label="event_image"/>
+          <input type="file" onchange="readURL(this);" aria-label="event_image"/>
           <img id="mock" src="http://placehold.it/180" alt="Your Image"/>
           <hr>
 <!--         </div> -->
